@@ -1,6 +1,6 @@
 module.exports = {
-  roots: ['<roorDir>/src'],
-  collectCoverageForm: [
+  roots: ['<rootDir>/src'],
+  collectCoverageFrom: [
     '<rootDir>/src/**/*.{ts,tsx}'
   ],
   coverageDirectory: 'coverage',
