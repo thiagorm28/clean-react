@@ -1,6 +1,6 @@
 {
   "extends": [
-    "standard-with-typescript",
+    "standard-with-typescript"
   ],
   "parserOptions": {
     "project": "./tsconfig.json"
@@ -8,6 +8,6 @@
   "rules": {
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
-    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/camelcase": "off"
   }
 }
