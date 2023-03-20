@@ -15,7 +15,7 @@ const makeSut = (): SutTypes => {
   const mockedAxios = mockAxios()
   return {
     sut,
-    mockedAxios
+    mockedAxios,
   }
 }
 

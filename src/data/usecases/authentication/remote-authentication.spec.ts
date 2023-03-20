@@ -18,7 +18,7 @@ const makeSut = (url: string = faker.internet.url()): SutTypes => {
 
   return {
     sut,
-    httpPostClientSpy
+    httpPostClientSpy,
   }
 }
 
@@ -40,7 +40,7 @@ describe('RemoteAuthentication', () => {
   test('Should throw InvalidCredentialsError if HttpPostClient returns 401', async () => {
     const { sut, httpPostClientSpy } = makeSut()
     httpPostClientSpy.response = {
-      statusCode: HttpStatusCode.unauthorized
+      statusCode: HttpStatusCode.unauthorized,
     }
     const authenticationParams = mockAuthentication()
     const promise = sut.auth(authenticationParams)
@@ -50,7 +50,7 @@ describe('RemoteAuthentication', () => {
   test('Should throw UnexpectedError if HttpPostClient returns 400', async () => {
     const { sut, httpPostClientSpy } = makeSut()
     httpPostClientSpy.response = {
-      statusCode: HttpStatusCode.badRequest
+      statusCode: HttpStatusCode.badRequest,
     }
     const authenticationParams = mockAuthentication()
     const promise = sut.auth(authenticationParams)
@@ -60,7 +60,7 @@ describe('RemoteAuthentication', () => {
   test('Should throw UnexpectedError if HttpPostClient returns 404', async () => {
     const { sut, httpPostClientSpy } = makeSut()
     httpPostClientSpy.response = {
-      statusCode: HttpStatusCode.notFound
+      statusCode: HttpStatusCode.notFound,
     }
     const authenticationParams = mockAuthentication()
     const promise = sut.auth(authenticationParams)
@@ -70,7 +70,7 @@ describe('RemoteAuthentication', () => {
   test('Should throw UnexpectedError if HttpPostClient returns 500', async () => {
     const { sut, httpPostClientSpy } = makeSut()
     httpPostClientSpy.response = {
-      statusCode: HttpStatusCode.serverError
+      statusCode: HttpStatusCode.serverError,
     }
     const authenticationParams = mockAuthentication()
     const promise = sut.auth(authenticationParams)
@@ -82,7 +82,7 @@ describe('RemoteAuthentication', () => {
     const httpResult = mockAccountModel()
     httpPostClientSpy.response = {
       statusCode: HttpStatusCode.ok,
-      body: httpResult
+      body: httpResult,
     }
     const account = await sut.auth(mockAuthentication())
     await expect(account).toEqual(httpResult)
