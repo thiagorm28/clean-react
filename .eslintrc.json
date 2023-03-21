@@ -1,16 +1,18 @@
 {
-  "extends": [
-    "plugin:react/recommended", 
-    "standard", 
-    "prettier", 
-    "plugin:prettier/recommended"
-  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": ["plugin:react/recommended", "standard", "prettier", "plugin:prettier/recommended"],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
   "rules": {
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
-    "@typescript-eslint/camelcase": "off"
+    "@typescript-eslint/camelcase": "off",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error"
   }
 }
