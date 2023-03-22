@@ -2,7 +2,7 @@
   "name": "clean-react",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Thiago <thiago.moraes@gazin.com.br>",
+  "author": "Thiago <thiagorm28@outlook.com>",
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --open",
