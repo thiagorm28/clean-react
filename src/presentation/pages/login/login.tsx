@@ -5,7 +5,7 @@ import Context from '@/presentation/contexts/form/form-context'
 import { Validation } from '@/presentation/protocols/validation'
 import { Authentication } from '@/domain/usecases'
 import { Link, useNavigate } from 'react-router-dom'
-import { SaveAccessToken } from '@/presentation/test'
+import { SaveAccessToken } from '@/domain/usecases/save-access-token'
 
 type StateProps = {
   isLoading: boolean
