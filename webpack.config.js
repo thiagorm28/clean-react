@@ -56,7 +56,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new DefinePlugin({
-      'process.env.API_URL': 'htp://fake.url.com/api',
+      'process.env.API_URL': JSON.stringify('htp://fake.url.com/api'),
     }),
   ],
 }
