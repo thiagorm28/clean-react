@@ -44,7 +44,7 @@ const simulateValidSubmit = (
   fireEvent.click(submitButton)
 }
 
-describe('Login Component', () => {
+describe('SignUp Component', () => {
   beforeEach(() => {
     localStorage.clear()
   })
