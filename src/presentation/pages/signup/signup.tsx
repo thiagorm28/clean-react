@@ -38,13 +38,6 @@ const SignUp: React.FC<Props> = ({ validation, addAccount }: Props) => {
     passwordConfirmationError: 'Campo obrigatório',
   })
 
-  useEffect(() => {
-    setState({
-      ...state,
-      nameError: validation.validate('name', state.name),
-    })
-  }, [state.name])
-
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault()
     try {

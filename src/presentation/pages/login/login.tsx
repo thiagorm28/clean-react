@@ -34,11 +34,11 @@ const Login: React.FC<Props> = ({ validation, authentication, saveAccessToken }:
   const navigate = useNavigate()
 
   useEffect(() => {
-    validation?.validate('email', state.email)
+    validation?.validate('email', [state.email])
   }, [state.email])
 
   useEffect(() => {
-    validation?.validate('password', state.password)
+    validation?.validate('password', [state.password])
   }, [state.password])
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
